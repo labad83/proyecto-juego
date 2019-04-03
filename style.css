@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+body {
+    background-image: url("./img/fondogeneral.png");
+    font-family: 'Comfortaa', cursive;
+}
+
+.start {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    border-radius: 12px;
+    height: 840px;
+    width: 600px;
+}
+
+.noVisible {
+    display: none;
+}
+
+
+/* .fondocanvas {
+    position: absolute;
+    width: 450px;
+    left: 585px;
+    top: 100px;
+} */
+
+
+/* 
+.title {
+    position: absolute;
+    width: 320px;
+    left: 650px;
+    top: 485px;
+}
+
+.mountain {
+    width: 380px;
+    margin-top: 0px;
+} */
+
+#start-button {
+    width: 600px;
+    display: block;
+    font-size: 35px;
+    color: #0e2537;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: -130px;
+    font-family: Comfortaa, cursive;
+    letter-spacing: 10px;
+}
+
+
+/* .title h1 {
+    font-size: Comfortaa;
+    position: relative;
+    margin-left: 720px;
+    font-size: 60px;
+    top: 560px;
+    color: #0e2537;
+} */
+
+#game {
+    display: none;
+    background-color: white;
+    border-radius: 12px;
+}
