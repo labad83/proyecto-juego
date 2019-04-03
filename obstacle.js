@@ -1,13 +1,13 @@
 class Obstacle {
-    constructor(w, h, ctx) {
+    constructor(w, h, ctx, dx) {
         this.ctx = ctx
         this.w = w
         this.h = h
-        this.x = 50
+        this.x = Math.floor(Math.random() * (580 - 20) + 20)
         this.y = h + 50
-        this.obsW = 42
-        this.obsH = 42
-        this.dx = 5
+        this.obsW = 21
+        this.obsH = 46
+        this.dx = dx
         this.img = new Image();
         this.img.src = "./img/bverde.png";
 
@@ -24,7 +24,6 @@ class Obstacle {
 
     move() {
         this.y -= this.dx;
-
         if (this.y < -this.h) this.y = 0;
     }
 }

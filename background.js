@@ -7,8 +7,7 @@ class Background {
             this.ctx = ctx,
             this.img = new Image();
         this.img.src = "./img/fondocanvas2.png";
-
-        this.dx = 5;
+        this.dx = 8;
     }
 
     increment() {
