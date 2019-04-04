@@ -1,9 +1,9 @@
 class Player {
     constructor(ctx) {
-        this.w = 95
-        this.h = 196
-        this.x = 230
-        this.y = 0
+        this.w = 60
+        this.h = 110
+        this.x = 270
+        this.y = 30
         this.ctx = ctx
         this.img1 = new Image();
         this.img1.src = "./img/skiplayer1.png";

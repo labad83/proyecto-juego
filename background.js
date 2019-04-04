@@ -6,8 +6,8 @@ class Background {
             this.y = 0,
             this.ctx = ctx,
             this.img = new Image();
-        this.img.src = "./img/fondocanvas2.png";
-        this.dx = 8;
+        this.img.src = "./img/fondocanvas3.png";
+        this.dx = 3;
     }
 
     increment() {

@@ -24,6 +24,8 @@ var Game = {
         this.reset();
         this.obstacles.push(new Obstacle(this.w, this.h, this.ctx, this.background.dx))
         this.startGame();
+        // this.myAudio = new Audio('music/Sky_Skating.mp3');
+
     },
 
     startGame: function() {
@@ -39,9 +41,19 @@ var Game = {
 
             this.drawAll();
             this.moveAll();
+            this.finish();
 
         }, 1000 / this.fps)
     },
+
+    // Canvas.prototype.init = function () {
+
+    //     this.myAudio.play();
+
+    //     this.idInterval = setInterval(function () {
+    //         this.contentInit();
+    //     }.bind(this), 1000 / this.fps);
+
 
     // esta función es para que aparezca la meta cada 3 debido al contador de banderas.
     showMeta: function() {
@@ -50,7 +62,7 @@ var Game = {
             this.meta = new Meta(this.w, this.h, this.ctx, this.background.dx)
         }
     },
-
+    // generamos las banderas
     generateObstacle: function() {
         if (this.obstaclesState) {
 
@@ -69,19 +81,22 @@ var Game = {
 
 
     collision: function(player, obstacle) {
-        // if (
-        //     b.x < a.x + a.w &&
-        //     a.x < b.x + b.w &&
-        //     b.y < a.y + a.h &&
-        //     a.y < b.y + b.h
-        // ) return true;
-        // else return false;
+        if (
+            obstacle.x < player.x + player.w &&
+            obstacle.x + obstacle.obsW > player.x &&
+            obstacle.y < player.y + player.h &&
+            obstacle.obsH + obstacle.y > player.y) {
 
-        if ((obstacle.x > (player.x + player.w)) ||
-            ((obstacle.x + obstacle.w) < player.x) ||
-            (obstacle.y > (player.y + player.h)) ||
-            ((obstacle.y + obstacle.h) < player.y)) return false;
-        return true;
+            return true;
+        } else {
+            return false;
+        }
+
+        // if ((obstacle.x > (player.x + player.w)) ||
+        //     ((obstacle.x + obstacle.w) < player.x) ||
+        //     (obstacle.y > (player.y + player.h)) ||
+        //     ((obstacle.y + obstacle.h) < player.y)) return false;
+        // return true;
 
     },
     // comprueba si colisiona a y b
@@ -95,6 +110,20 @@ var Game = {
         }
 
     },
+
+    //    backgroundEnd: function () {
+
+    //         setTimeout(function () {
+    //             this.clear();
+    //             clearTimeout(this.setTimeout);
+    //             this.ctx.drawImage(this.imgEnd, 0, 0, 830, 400);
+    //         }.bind(this), 500)
+
+    //         setTimeout(function(){
+    //             this.myAudio.pause();
+    //             location.reload();
+    //         }.bind(this),2000)
+    //     }
 
 
     //funcion pintar todo
@@ -147,59 +176,31 @@ var Game = {
     reset: function() {
         // this.background = new Background(this.canvasDOMEl.width, this.canvasDOMEl.height, this.ctx);
         // this.player = new Player(this.canvasDOMEl.width, this.canvasDOMEl.height, this.ctx);
+        document.getElementById("game").style.display = 'block'
         this.obstacles = [];
         this.counter = 0;
         this.score = 0;
         this.flagcounter = 0;
+        this.meta = undefined;
+        this.background.dx = 2;
+        this.obstaclesState = true;
+
     },
+    finish: function() {
+        if (this.meta) {
+
+            if (this.meta.y <= this.player.y - 30) {
+                clearInterval(this.intervalID);
+
+                document.getElementById("final").style.display = 'block';
+                document.getElementById("score").innerHTML = this.score;
+                document.getElementById("start-again").onclick = function() {
+                    document.getElementById("final").style.display = 'none'
+                    this.initGame()
+
+                }.bind(this)
+
+            }
+        }
+    }
 }
-
-
-
-
-
-
-
-
-// canvasDOMEl.setAttribute("height", window.innerHeight)
-// canvasDOMEl.setAttribute("width", window.innerWidth)
-
-// canvasW = canvasDOMEl.innerWidth
-// canvasH = canvasDOMEl.innerHeight
-
-
-
-
-// function background() {
-//     var fondo = new Image();
-//     fondo.src = "./fondo.png";
-//     fondo.onload = function() {
-// pintamos la imagen de fondo del canvas (fondo,w2 es al medio,70 es altura de top hacia abajo, 76x141 es el tamaño de la imagen)
-//     ctx.drawImage(fondo, w2 - 230, 0, 400, 700)
-// };
-
-// }
-
-// function paintPlayer() {
-//     var skyPlayer = new Image();
-//     skyPlayer.src = "./skyplayer.png";
-//     skyPlayer.onload = function() {
-// pintamos la imagen (skyplayer,w2 es al medio,60 es altura de top hacia abajo, 56x121 es el tamaño de la imagen)
-//         ctx.drawImage(skyPlayer, w2 - 76, 60, 56, 121)
-//     };
-
-// }
-
-
-
-// function draw() {
-
-//     background();
-
-// setInterval(() => {
-//     paintPlayer();
-// }, 10);
-
-// }
-
-// draw();

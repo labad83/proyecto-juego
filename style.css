@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 body {
-    background-image: url("./img/fondogeneral.png");
+    background-image: url("./img/mountains.png");
     font-family: 'Comfortaa', cursive;
 }
 
@@ -20,8 +20,30 @@ img {
     width: 600px;
 }
 
-.noVisible {
+#start-again {
+    color: white;
+    width: 320px;
+    height: 70px;
+    font-size: 40px;
+    border-radius: 5px;
+    font-family: Comfortaa, cursive;
+    background-color: #489cae
+}
+
+#final {
     display: none;
+    position: fixed;
+    top: 450px;
+    left: 600px;
+    font-size: 35px;
+    color: #0e2537;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: -130px;
+    font-family: Comfortaa, cursive;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 70px;
 }
 
 
@@ -32,19 +54,10 @@ img {
     top: 100px;
 } */
 
-
-/* 
-.title {
-    position: absolute;
-    width: 320px;
-    left: 650px;
-    top: 485px;
-}
-
 .mountain {
     width: 380px;
     margin-top: 0px;
-} */
+}
 
 #start-button {
     width: 600px;
@@ -57,16 +70,6 @@ img {
     font-family: Comfortaa, cursive;
     letter-spacing: 10px;
 }
-
-
-/* .title h1 {
-    font-size: Comfortaa;
-    position: relative;
-    margin-left: 720px;
-    font-size: 60px;
-    top: 560px;
-    color: #0e2537;
-} */
 
 #game {
     display: none;

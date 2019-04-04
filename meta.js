@@ -3,9 +3,9 @@ class Meta {
         this.ctx = ctx
         this.w = w
         this.h = h
-        this.x = 250
+        this.x = 200
         this.y = h
-        this.metaW = 110
+        this.metaW = 180
         this.metaH = 64
         this.dx = dx
         this.img = new Image();
