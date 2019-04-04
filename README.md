@@ -30,4 +30,4 @@ Con más margen de tiempo y conocimiento quizás hubiese planteado otro tipo de 
 
 
 
-**Con ganas de seguir mejorando 📖**
+**Con ganas de seguir mejorando. GRACIAS TA´S, D.VICARIO, Y MIS COMPAÑEROS POR TODO SU APOYO 📖**
