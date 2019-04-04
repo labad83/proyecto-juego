@@ -13,7 +13,7 @@ var Game = {
     fps: 60,
     obstacles: [],
     obstaclesState: true,
-    soundFlag: new Audio('music/click'),
+    // soundFlag: new Audio('music/click'),
 
     initGame: function() {
         this.canvasDOMEl = document.getElementById("game")
@@ -165,7 +165,7 @@ var Game = {
     finish: function() {
         if (this.meta) {
 
-            if (this.meta.y <= this.player.y - 30) {
+            if (this.meta.y <= this.player.y - 40) {
                 this.myAudio.pause();
                 clearInterval(this.intervalID);
 

@@ -3,7 +3,7 @@ class Player {
         this.w = 60
         this.h = 110
         this.x = 270
-        this.y = 30
+        this.y = 90
         this.ctx = ctx
         this.img1 = new Image();
         this.img1.src = "./img/skiplayer1.png";
