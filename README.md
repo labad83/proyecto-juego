@@ -1,5 +1,5 @@
 # Proyecto Skiity 🚀
-
+![readme1](https://user-images.githubusercontent.com/46005400/55588892-41c4b280-572f-11e9-963f-74dc2472b6ea.png)
 
 El juego consiste en una esquiadora que se desplaza en su eje X en el canvas. El objetivo es conseguir la mayor cantidad de banderas azules para conseguir la máxima puntuación. El final llega cuando cruza la meta y se ve el recuento de puntos. Después puedes volver a intentarlo las veces que desees. 
 
@@ -7,6 +7,7 @@ El juego consiste en una esquiadora que se desplaza en su eje X en el canvas. El
   - Busqueda de un mínimo producto viable **(MVP)**, debido al tiempo de ejecución. Con los conocimientos que he adquirido planifiqué el tiempo para llegar con cierta solvencia y poder ver si ampliar dificultades.
   - Unos **sketches básicos** en papel para ver el desarrollo de la parte visual, estructura, elementos etc... 
   - Ver un **mínimo de interacciones** a realizar y valorar dificultad.
+  
 
 ### Desarrollo 🔧
 
