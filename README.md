@@ -8,6 +8,7 @@ El juego consiste en una esquiadora que se desplaza en su eje X en el canvas. El
   - Unos **sketches básicos** en papel para ver el desarrollo de la parte visual, estructura, elementos etc... 
   - Ver un **mínimo de interacciones** a realizar y valorar dificultad.
   
+![readme2 (1)](https://user-images.githubusercontent.com/46005400/55589152-dc24f600-572f-11e9-848b-1b79ef1a310c.png)
 
 ### Desarrollo 🔧
 
