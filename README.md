@@ -27,7 +27,9 @@ Con más margen de tiempo y conocimiento quizás hubiese planteado otro tipo de 
 
   - A pesar de la dificultad uno se va animando poco a poco ha añadir más cosas.. aunque no es un juego de la play.
   - Me ha ayudado a entender bastantes cosas de manera express.
-
+  
+  
+![readme3](https://user-images.githubusercontent.com/46005400/55589485-9caad980-5730-11e9-8b87-91d9c7aade4f.png)
 
 
 **Con ganas de seguir mejorando. GRACIAS TA´S, D.VICARIO, Y MIS COMPAÑEROS POR TODO SU APOYO 📖**
