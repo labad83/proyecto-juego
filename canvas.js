@@ -13,6 +13,7 @@ var Game = {
     fps: 60,
     obstacles: [],
     obstaclesState: true,
+    soundFlag: new Audio('music/click'),
 
     initGame: function() {
         this.canvasDOMEl = document.getElementById("game")
@@ -23,12 +24,14 @@ var Game = {
         this.background = new Background(this.w, this.h, this.ctx)
         this.reset();
         this.obstacles.push(new Obstacle(this.w, this.h, this.ctx, this.background.dx))
-        this.startGame();
-        // this.myAudio = new Audio('music/Sky_Skating.mp3');
+            //this.startGame();
+        this.myAudio = new Audio('music/Sky_Skating.mp3');
+        this.myAudio.onload = this.startGame();
 
     },
 
     startGame: function() {
+        this.myAudio.play();
         this.intervalID = setInterval(() => {
             this.clearScreen();
             this.counter++;
@@ -45,14 +48,6 @@ var Game = {
 
         }, 1000 / this.fps)
     },
-
-    // Canvas.prototype.init = function () {
-
-    //     this.myAudio.play();
-
-    //     this.idInterval = setInterval(function () {
-    //         this.contentInit();
-    //     }.bind(this), 1000 / this.fps);
 
 
     // esta función es para que aparezca la meta cada 3 debido al contador de banderas.
@@ -92,38 +87,21 @@ var Game = {
             return false;
         }
 
-        // if ((obstacle.x > (player.x + player.w)) ||
-        //     ((obstacle.x + obstacle.w) < player.x) ||
-        //     (obstacle.y > (player.y + player.h)) ||
-        //     ((obstacle.y + obstacle.h) < player.y)) return false;
-        // return true;
-
     },
+
+
     // comprueba si colisiona a y b
     checkFlagCollision: function(player) {
         for (var i = 0; i < this.obstacles.length; i++) {
             if (this.collision(player, this.obstacles[i])) {
                 this.obstacles.splice(i, 1)
                 this.score += 10;
+                this.soundFlag.play();
             }
 
         }
 
     },
-
-    //    backgroundEnd: function () {
-
-    //         setTimeout(function () {
-    //             this.clear();
-    //             clearTimeout(this.setTimeout);
-    //             this.ctx.drawImage(this.imgEnd, 0, 0, 830, 400);
-    //         }.bind(this), 500)
-
-    //         setTimeout(function(){
-    //             this.myAudio.pause();
-    //             location.reload();
-    //         }.bind(this),2000)
-    //     }
 
 
     //funcion pintar todo
@@ -174,8 +152,6 @@ var Game = {
     },
 
     reset: function() {
-        // this.background = new Background(this.canvasDOMEl.width, this.canvasDOMEl.height, this.ctx);
-        // this.player = new Player(this.canvasDOMEl.width, this.canvasDOMEl.height, this.ctx);
         document.getElementById("game").style.display = 'block'
         this.obstacles = [];
         this.counter = 0;
@@ -190,6 +166,7 @@ var Game = {
         if (this.meta) {
 
             if (this.meta.y <= this.player.y - 30) {
+                this.myAudio.pause();
                 clearInterval(this.intervalID);
 
                 document.getElementById("final").style.display = 'block';

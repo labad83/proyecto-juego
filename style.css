@@ -34,7 +34,7 @@ img {
     display: none;
     position: fixed;
     top: 450px;
-    left: 600px;
+    left: 660px;
     font-size: 35px;
     color: #0e2537;
     background-color: transparent;
@@ -45,14 +45,6 @@ img {
     text-align: center;
     line-height: 70px;
 }
-
-
-/* .fondocanvas {
-    position: absolute;
-    width: 450px;
-    left: 585px;
-    top: 100px;
-} */
 
 .mountain {
     width: 380px;

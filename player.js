@@ -15,7 +15,6 @@ class Player {
         };
         this.img = this.img1; //default image: 1
         // this.frame = 0
-
     }
 
 
@@ -54,9 +53,6 @@ class Player {
             this.x += 5;
         }
 
-
-
-        // this.x++
     }
 
 
