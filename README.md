@@ -28,4 +28,6 @@ Con más margen de tiempo y conocimiento quizás hubiese planteado otro tipo de 
   - A pesar de la dificultad uno se va animando poco a poco ha añadir más cosas.. aunque no es un juego de la play.
   - Me ha ayudado a entender bastantes cosas de manera express.
 
+
+
 **Con ganas de seguir mejorando 📖**
