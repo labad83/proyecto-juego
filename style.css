@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 body {
     background-image: url("./img/mountains.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Comfortaa', cursive;
-    background-color: #3c2d37;
 }
 
 .start {
