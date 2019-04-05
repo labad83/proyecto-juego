@@ -13,7 +13,7 @@ El juego consiste en una esquiadora que se desplaza en su eje X en el canvas. El
 ### Desarrollo 🔧
 
 Una parte compleja para mi al nivel tan básico al que estoy, pero orgullosa de haber llegado al objetivo.
-La parte que más ha costado ha sido el **igualar las velocidades** de las banderitas con el fondo y meta. Por que unos van al unísono y otro tiene que aparecer con retroceso pero a la misma velocidad que lleve el resto del conjunto, ya que todo incrementa con el tiempo.
+La parte que más ha costado ha sido el **igualar las velocidades** de las banderitas con el fondo y la meta. Por que unos van al unísono y otro tiene que aparecer con retroceso pero a la misma velocidad que lleve el resto del conjunto, ya que todo incrementa con el tiempo.
 
 También **coordinar las colisiones** y que a su vez **sumen al marcador**
 
